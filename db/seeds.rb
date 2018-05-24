@@ -1,3 +1,19 @@
+require 'open-uri'
+require 'json'
+
+puts 'Cleaning database...'
+Cocktail.destroy_all
+
+puts 'Creating cocktails...'
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+drink_serialized = open(url).read
+data = JSON.parse(drink_serialized)
+data["drinks"].each do |drink|
+  Ingredient.create(name: drink["strIngredient1"])
+end
+
+puts 'Finished!'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #

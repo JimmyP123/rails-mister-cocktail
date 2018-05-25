@@ -4,25 +4,19 @@
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
-          <img src="images/sample-1.jpg">
+          <%= cl_image_tag("https://st2.depositphotos.com/1017986/8588/i/950/depositphotos_85886306-stock-photo-unhappy-lonely-man-drinking-beer.jpg",
+      width: 400, height: 300, crop: :fill) %><!-- <img src="images/sample-1.jpg"> -->
           <span class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></span>
         </div>
         <div class="card-content">
           <p>Deliciously Deleterious cocktails</p>
         </div>
         <div class="card-action">
-          <a href="#">something</a>
+          <a href="#">[some drink]! does it matter?</a>
         </div>
       </div>
     </div>
     <% end %></ul>
   </div>
 
-
-
    <%= link_to "New cocktail", new_cocktail_path %>
-
-
-
-<%= cl_image_tag("https://st2.depositphotos.com/1017986/8588/i/950/depositphotos_85886306-stock-photo-unhappy-lonely-man-drinking-beer.jpg",
-      width: 400, height: 300, crop: :fill) %>

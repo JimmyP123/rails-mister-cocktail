@@ -13,9 +13,7 @@
  *= require_tree .
  *= require_self
  */
-.form-group {
-select {
-  display: list-item !important;
-}
 
+select {
+  display: normal;
 }

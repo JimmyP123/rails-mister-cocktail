@@ -17,7 +17,6 @@ before_action :set_dose, only: [:show, :edit, :update, :destroy]
   def create
     @dose = Dose.create(dose_params)
     @dose.cocktail = Cocktail.find(params[:cocktail_id])
-    byebug
     if @dose.save
       # redirect_to @dose.cocktail
       redirect_to cocktails_path(@dose.cocktail)

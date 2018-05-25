@@ -2,8 +2,6 @@ require 'open-uri'
 require 'json'
 
 puts 'Cleaning database...'
-Cocktail.destroy_all
-
 puts 'Creating cocktails...'
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'

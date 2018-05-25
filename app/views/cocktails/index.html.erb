@@ -6,3 +6,9 @@
       data: { confirm: "delete for real?"} %>
    </li> <% end %></ul>
    <%= link_to "New cocktail", new_cocktail_path %>
+
+<%= cl_image_tag("http://res.cloudinary.com/djf4hzq8t/image/upload/v1527226457/ndwcvhqytsz7vxpykbog.jpg",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("http://res.cloudinary.com/djf4hzq8t/image/upload/v1527226467/aec3bfvtxssin2ajjvtf.jpg",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
